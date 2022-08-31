@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
-import DataDrawer from "./components/DataDrawer";
-import Header from "./components/Header";
-import LoanTable from "./components/LoanTable";
+import DataDrawer from "../components/DataDrawer";
+import Header from "../components/Header";
+import LoanTable from "../components/LoanTable";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(true);
