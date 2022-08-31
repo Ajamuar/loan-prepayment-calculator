@@ -7,7 +7,7 @@ interface IHeader {
 
 const Header = ({ onOpen }: IHeader) => {
   return (
-    <Box w="100vw" p="4">
+    <Box display={"flex"} justifyContent="flex-end" p="4">
       <Button onClick={onOpen}>
         <HamburgerIcon />
       </Button>

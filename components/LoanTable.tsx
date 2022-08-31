@@ -41,13 +41,7 @@ const LoanTable = ({
 
   return (
     <Box>
-      <TableContainer
-        background={"white"}
-        padding={5}
-        borderRadius={3}
-        maxH={"calc(100vh - 100px)"}
-        overflowY="scroll"
-      >
+      <TableContainer background={"white"} padding={5} borderRadius={3}>
         <Table variant="simple">
           <Thead>
             <Tr>
@@ -59,7 +53,7 @@ const LoanTable = ({
               <Th>Outstanding</Th>
             </Tr>
           </Thead>
-          <Tbody overflow={"scroll"}>
+          <Tbody>
             {loanData.map((loan) => (
               <Tr key={loan.month}>
                 <Td>{loan.month}</Td>

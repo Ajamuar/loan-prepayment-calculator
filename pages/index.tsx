@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import DataDrawer from "../components/DataDrawer";
 import Header from "../components/Header";
 import LoanTable from "../components/LoanTable";
+import { Box } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -25,24 +26,26 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Header onOpen={() => setIsOpen((open) => !open)} />
-        <DataDrawer
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-          principal={principal}
-          rates={rates}
-          tenure={tenure}
-          setPrincipal={setPrincipal}
-          setRates={setRates}
-          setTenure={setTenure}
-        />
-        <LoanTable
-          principal={principal}
-          rates={rates}
-          tenure={tenure}
-          prepaymentJSON={prepaymentJSON}
-          setPrepaymentJSON={setPrepaymentJSON}
-        />
+        <Box>
+          <Header onOpen={() => setIsOpen((open) => !open)} />
+          <DataDrawer
+            isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+            principal={principal}
+            rates={rates}
+            tenure={tenure}
+            setPrincipal={setPrincipal}
+            setRates={setRates}
+            setTenure={setTenure}
+          />
+          <LoanTable
+            principal={principal}
+            rates={rates}
+            tenure={tenure}
+            prepaymentJSON={prepaymentJSON}
+            setPrepaymentJSON={setPrepaymentJSON}
+          />
+        </Box>
       </main>
     </div>
   );
