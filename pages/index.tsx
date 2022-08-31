@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   const [prepaymentJSON, setPrepaymentJSON] = useState({});
 
   return (
-    <Box px={[0, 8, 8, 64]}>
+    <Box px={[0, 8, 8, 8, 64]}>
       <Head>
         <title>Loan Prepayment Calculator</title>
         <meta

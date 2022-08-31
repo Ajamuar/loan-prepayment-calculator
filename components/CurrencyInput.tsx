@@ -25,6 +25,7 @@ const CurrencyInput = ({ value, onChange }: ICurrencyInput) => {
 
   return (
     <NumberInput
+      minW={"160px"}
       value={value}
       onChange={(valueAsString, valueAsNumber) => {
         if (
