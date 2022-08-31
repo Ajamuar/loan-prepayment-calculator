@@ -57,9 +57,9 @@ const LoanTable = ({
             {loanData.map((loan) => (
               <Tr key={loan.month}>
                 <Td>{loan.month}</Td>
-                <Td>{loan.principal}</Td>
-                <Td>{loan.interest}</Td>
-                <Td>{loan.emi}</Td>
+                <Td>₹ {loan.principal.toFixed(2)}</Td>
+                <Td>₹ {loan.interest.toFixed(2)}</Td>
+                <Td>₹ {loan.emi.toFixed(2)}</Td>
                 <Td>
                   <CurrencyInput
                     value={prepaymentJSON[loan.month]}
@@ -70,7 +70,7 @@ const LoanTable = ({
                     }}
                   />
                 </Td>
-                <Td>{loan.outstanding}</Td>
+                <Td>₹ {loan.outstanding.toFixed(2)}</Td>
               </Tr>
             ))}
           </Tbody>
