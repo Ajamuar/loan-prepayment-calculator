@@ -76,6 +76,7 @@ const DataDrawer = ({
                   setRates(valueAsNumber);
                 }
               }}
+              onFocus={(event) => event.target.select()}
             >
               <NumberInputField />
             </NumberInput>
@@ -101,6 +102,7 @@ const DataDrawer = ({
                   setTenure(valueAsNumber);
                 }
               }}
+              onFocus={(event) => event.target.select()}
             >
               <NumberInputField />
               <NumberInputStepper>

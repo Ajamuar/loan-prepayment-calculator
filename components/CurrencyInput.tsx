@@ -39,6 +39,7 @@ const CurrencyInput = ({ value, onChange }: ICurrencyInput) => {
         }
       }}
       format={(value) => format(value)}
+      onFocus={(event) => event.target.select()}
     >
       <NumberInputField />
     </NumberInput>
